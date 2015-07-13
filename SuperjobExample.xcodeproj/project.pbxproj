@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A3F5057D37573BC0F86ECC6 /* NSError+SJError.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F55926B905BB9EE755EF0 /* NSError+SJError.m */; };
+		5A3F50A0F15CFEEDE8A3D71D /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F55A0AD02F46392B881D5 /* API.m */; };
+		5A3F56CAFA7C4A02901C364C /* SJAPIAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F52E95CEF41616E6EC3DA /* SJAPIAdapterSpec.m */; };
+		5A3F58DDCA8ED9C2CC1FE050 /* SJVacancyFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5DFD40136170F6B4212A /* SJVacancyFacade.m */; };
+		5A3F5E4C376765D59EC3C0B0 /* SJAPIAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F58C65B55784C4596F692 /* SJAPIAdapter.m */; };
+		5A3F5F83ECC6E2C6986FADCA /* SJVacancyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F540F353D77F1445D3225 /* SJVacancyTableViewController.m */; };
+		5A3F5F8D979D7F3405750FE9 /* SJSettingsStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F55A5C32708F7F6F4BBF2 /* SJSettingsStorage.m */; };
+		8EC66042E179D81284814A6F /* libPods-SuperjobExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2535154BC1C8C20C2938D11E /* libPods-SuperjobExampleTests.a */; };
+		A6D379ECF231F2673A665C84 /* libPods-SuperjobExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEC608772489DB2C8DA86CA /* libPods-SuperjobExample.a */; };
 		B58656011B53B66100DCDCB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B58656001B53B66100DCDCB2 /* main.m */; };
 		B58656041B53B66100DCDCB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B58656031B53B66100DCDCB2 /* AppDelegate.m */; };
-		B58656071B53B66100DCDCB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B58656061B53B66100DCDCB2 /* ViewController.m */; };
 		B586560A1B53B66100DCDCB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58656081B53B66100DCDCB2 /* Main.storyboard */; };
 		B586560C1B53B66100DCDCB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586560B1B53B66100DCDCB2 /* Images.xcassets */; };
 		B586560F1B53B66100DCDCB2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B586560D1B53B66100DCDCB2 /* LaunchScreen.xib */; };
@@ -27,19 +35,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2535154BC1C8C20C2938D11E /* libPods-SuperjobExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperjobExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5515E73FAEDBEC35E1FF3898 /* Pods-SuperjobExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperjobExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperjobExampleTests/Pods-SuperjobExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A3F506EF58EEA8BEB361BA3 /* NSError+SJError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+SJError.h"; sourceTree = "<group>"; };
+		5A3F52E95CEF41616E6EC3DA /* SJAPIAdapterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAPIAdapterSpec.m; sourceTree = "<group>"; };
+		5A3F53481F6DD11F0F0CDF80 /* SJAPIAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAPIAdapter.h; sourceTree = "<group>"; };
+		5A3F540F353D77F1445D3225 /* SJVacancyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyTableViewController.m; sourceTree = "<group>"; };
+		5A3F55926B905BB9EE755EF0 /* NSError+SJError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+SJError.m"; sourceTree = "<group>"; };
+		5A3F55A0AD02F46392B881D5 /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
+		5A3F55A5C32708F7F6F4BBF2 /* SJSettingsStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJSettingsStorage.m; sourceTree = "<group>"; };
+		5A3F5622B5B8FC4300C80545 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		5A3F564778FAE00E896BCB36 /* SJVacancyFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVacancyFacade.h; sourceTree = "<group>"; };
+		5A3F58299DE143B147AB3B60 /* Specs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Specs.h; sourceTree = "<group>"; };
+		5A3F58C65B55784C4596F692 /* SJAPIAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAPIAdapter.m; sourceTree = "<group>"; };
+		5A3F5DFD40136170F6B4212A /* SJVacancyFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyFacade.m; sourceTree = "<group>"; };
+		5A3F5EE7E35FE5A3DDE5827C /* SJSettingsStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJSettingsStorage.h; sourceTree = "<group>"; };
+		5A3F5F6B8DAF624BCC23416A /* SJVacancyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVacancyTableViewController.h; sourceTree = "<group>"; };
+		7A6BB5D4ED2A1D2614A13FE1 /* Pods-SuperjobExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperjobExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperjobExample/Pods-SuperjobExample.release.xcconfig"; sourceTree = "<group>"; };
+		9B09268F2540CA86380C2649 /* Pods-SuperjobExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperjobExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperjobExample/Pods-SuperjobExample.debug.xcconfig"; sourceTree = "<group>"; };
+		ABEC608772489DB2C8DA86CA /* libPods-SuperjobExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperjobExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58655FB1B53B66100DCDCB2 /* SuperjobExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperjobExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58655FF1B53B66100DCDCB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B58656001B53B66100DCDCB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B58656021B53B66100DCDCB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B58656031B53B66100DCDCB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B58656051B53B66100DCDCB2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B58656061B53B66100DCDCB2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B58656091B53B66100DCDCB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B586560B1B53B66100DCDCB2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B586560E1B53B66100DCDCB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B58656141B53B66100DCDCB2 /* SuperjobExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperjobExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58656191B53B66100DCDCB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586561A1B53B66100DCDCB2 /* SuperjobExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperjobExampleTests.m; sourceTree = "<group>"; };
+		D773BF35B653FCA8C46D3711 /* Pods-SuperjobExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperjobExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperjobExampleTests/Pods-SuperjobExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6D379ECF231F2673A665C84 /* libPods-SuperjobExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +81,93 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC66042E179D81284814A6F /* libPods-SuperjobExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A3F55AC691C59A0FA76FCFF /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F5622B5B8FC4300C80545 /* API.h */,
+				5A3F55A0AD02F46392B881D5 /* API.m */,
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
+		5A3F5615A80AEC3B471407E5 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F5EE7E35FE5A3DDE5827C /* SJSettingsStorage.h */,
+				5A3F55A5C32708F7F6F4BBF2 /* SJSettingsStorage.m */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		5A3F58F3BA4A71E7CCBFEDED /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F55926B905BB9EE755EF0 /* NSError+SJError.m */,
+				5A3F506EF58EEA8BEB361BA3 /* NSError+SJError.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		5A3F5AB7498E66DD16A14DF1 /* SJVacancyTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F5F6B8DAF624BCC23416A /* SJVacancyTableViewController.h */,
+				5A3F540F353D77F1445D3225 /* SJVacancyTableViewController.m */,
+			);
+			path = SJVacancyTableViewController;
+			sourceTree = "<group>";
+		};
+		5A3F5AF396811DBCC950B217 /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F5DFD40136170F6B4212A /* SJVacancyFacade.m */,
+				5A3F564778FAE00E896BCB36 /* SJVacancyFacade.h */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
+		5A3F5E89F83D56FBF8051923 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F5AB7498E66DD16A14DF1 /* SJVacancyTableViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5A3F5F5A6F1563AE6385B4A3 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F58C65B55784C4596F692 /* SJAPIAdapter.m */,
+				5A3F53481F6DD11F0F0CDF80 /* SJAPIAdapter.h */,
+				5A3F52E95CEF41616E6EC3DA /* SJAPIAdapterSpec.m */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		774147BAF262C4A7A0335D8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABEC608772489DB2C8DA86CA /* libPods-SuperjobExample.a */,
+				2535154BC1C8C20C2938D11E /* libPods-SuperjobExampleTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B58655F21B53B66000DCDCB2 = {
 			isa = PBXGroup;
 			children = (
 				B58655FD1B53B66100DCDCB2 /* SuperjobExample */,
 				B58656171B53B66100DCDCB2 /* SuperjobExampleTests */,
 				B58655FC1B53B66100DCDCB2 /* Products */,
+				BA9183406BA01BD9ED3BB72A /* Pods */,
+				774147BAF262C4A7A0335D8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,12 +185,16 @@
 			children = (
 				B58656021B53B66100DCDCB2 /* AppDelegate.h */,
 				B58656031B53B66100DCDCB2 /* AppDelegate.m */,
-				B58656051B53B66100DCDCB2 /* ViewController.h */,
-				B58656061B53B66100DCDCB2 /* ViewController.m */,
 				B58656081B53B66100DCDCB2 /* Main.storyboard */,
 				B586560B1B53B66100DCDCB2 /* Images.xcassets */,
 				B586560D1B53B66100DCDCB2 /* LaunchScreen.xib */,
 				B58655FE1B53B66100DCDCB2 /* Supporting Files */,
+				5A3F5AF396811DBCC950B217 /* Facade */,
+				5A3F5F5A6F1563AE6385B4A3 /* Adapter */,
+				5A3F55AC691C59A0FA76FCFF /* Data Source */,
+				5A3F5E89F83D56FBF8051923 /* Controllers */,
+				5A3F58F3BA4A71E7CCBFEDED /* Categories */,
+				5A3F5615A80AEC3B471407E5 /* Storage */,
 			);
 			path = SuperjobExample;
 			sourceTree = "<group>";
@@ -107,6 +213,7 @@
 			children = (
 				B586561A1B53B66100DCDCB2 /* SuperjobExampleTests.m */,
 				B58656181B53B66100DCDCB2 /* Supporting Files */,
+				5A3F58299DE143B147AB3B60 /* Specs.h */,
 			);
 			path = SuperjobExampleTests;
 			sourceTree = "<group>";
@@ -119,6 +226,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BA9183406BA01BD9ED3BB72A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B09268F2540CA86380C2649 /* Pods-SuperjobExample.debug.xcconfig */,
+				7A6BB5D4ED2A1D2614A13FE1 /* Pods-SuperjobExample.release.xcconfig */,
+				5515E73FAEDBEC35E1FF3898 /* Pods-SuperjobExampleTests.debug.xcconfig */,
+				D773BF35B653FCA8C46D3711 /* Pods-SuperjobExampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B586561E1B53B66100DCDCB2 /* Build configuration list for PBXNativeTarget "SuperjobExample" */;
 			buildPhases = (
+				179244F92DFC1FC26D52891A /* Check Pods Manifest.lock */,
 				B58655F71B53B66100DCDCB2 /* Sources */,
 				B58655F81B53B66100DCDCB2 /* Frameworks */,
 				B58655F91B53B66100DCDCB2 /* Resources */,
+				E37D085D1CDD5646789C8E25 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B58656211B53B66100DCDCB2 /* Build configuration list for PBXNativeTarget "SuperjobExampleTests" */;
 			buildPhases = (
+				A3A3108AF5166519F278B010 /* Check Pods Manifest.lock */,
 				B58656101B53B66100DCDCB2 /* Sources */,
 				B58656111B53B66100DCDCB2 /* Frameworks */,
 				B58656121B53B66100DCDCB2 /* Resources */,
+				1141539DBC683E5498893F21 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,14 +336,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1141539DBC683E5498893F21 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperjobExampleTests/Pods-SuperjobExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		179244F92DFC1FC26D52891A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3A3108AF5166519F278B010 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E37D085D1CDD5646789C8E25 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperjobExample/Pods-SuperjobExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B58655F71B53B66100DCDCB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B58656071B53B66100DCDCB2 /* ViewController.m in Sources */,
 				B58656041B53B66100DCDCB2 /* AppDelegate.m in Sources */,
 				B58656011B53B66100DCDCB2 /* main.m in Sources */,
+				5A3F5F83ECC6E2C6986FADCA /* SJVacancyTableViewController.m in Sources */,
+				5A3F50A0F15CFEEDE8A3D71D /* API.m in Sources */,
+				5A3F5057D37573BC0F86ECC6 /* NSError+SJError.m in Sources */,
+				5A3F5F8D979D7F3405750FE9 /* SJSettingsStorage.m in Sources */,
+				5A3F5E4C376765D59EC3C0B0 /* SJAPIAdapter.m in Sources */,
+				5A3F58DDCA8ED9C2CC1FE050 /* SJVacancyFacade.m in Sources */,
+				5A3F56CAFA7C4A02901C364C /* SJAPIAdapterSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +536,7 @@
 		};
 		B586561F1B53B66100DCDCB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B09268F2540CA86380C2649 /* Pods-SuperjobExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SuperjobExample/Info.plist;
@@ -355,6 +547,7 @@
 		};
 		B58656201B53B66100DCDCB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A6BB5D4ED2A1D2614A13FE1 /* Pods-SuperjobExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SuperjobExample/Info.plist;
@@ -365,6 +558,7 @@
 		};
 		B58656221B53B66100DCDCB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5515E73FAEDBEC35E1FF3898 /* Pods-SuperjobExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -384,6 +578,7 @@
 		};
 		B58656231B53B66100DCDCB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D773BF35B653FCA8C46D3711 /* Pods-SuperjobExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -416,6 +611,7 @@
 				B58656201B53B66100DCDCB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B58656211B53B66100DCDCB2 /* Build configuration list for PBXNativeTarget "SuperjobExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +620,7 @@
 				B58656231B53B66100DCDCB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

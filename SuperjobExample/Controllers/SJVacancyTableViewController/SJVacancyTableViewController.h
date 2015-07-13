@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SJVacancyTableViewController.h
 //  SuperjobExample
 //
 //  Created by Vladimir Burdukov on 13.07.15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SJVacancyTableViewController : UITableViewController
 
 @end
-
