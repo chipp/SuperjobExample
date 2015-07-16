@@ -18,4 +18,14 @@
 objection_register_singleton(SJAPIAdapter)
 objection_requires(@"settings", @"api", @"credentials")
 
+- (RACSignal *)vacanciesWithParams:(NSDictionary *)params {
+    return [self.api getPath:@"vacancies" withParams:params];
+}
+
+#pragma mark - Private
+
++ (RACSignal *)p_handleError:(NSError *)error {
+    return [RACSignal empty];
+}
+
 @end

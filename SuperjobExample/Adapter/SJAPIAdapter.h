@@ -12,6 +12,10 @@ typedef NS_ENUM(NSUInteger, SJAPIAdapterErrorCode) {
     SJAPIAdapterErrorCodeUndefined,
 };
 
+@class RACSignal;
+
 @interface SJAPIAdapter : NSObject
+
+- (RACSignal *)vacanciesWithParams:(NSDictionary *)params;
 
 @end
