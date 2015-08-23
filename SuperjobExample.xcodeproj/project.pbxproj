@@ -11,17 +11,21 @@
 		5A3F501AB1BE63E4D54809F2 /* SJCityModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5C92C284EE0E78C91A6F /* SJCityModelSpec.m */; };
 		5A3F5057D37573BC0F86ECC6 /* NSError+SJError.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F55926B905BB9EE755EF0 /* NSError+SJError.m */; };
 		5A3F50875D1D879DFDFF7459 /* SJAPIAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F52E95CEF41616E6EC3DA /* SJAPIAdapterSpec.m */; };
+		5A3F509A41A3AB9F5B1398B3 /* SJVacancyViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F538DA401C069DAB59D42 /* SJVacancyViewItem.m */; };
 		5A3F50A0F15CFEEDE8A3D71D /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F55A0AD02F46392B881D5 /* API.m */; };
 		5A3F50C9909E6D0D1F0AB96B /* SJCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5BAAC6C1A4AFBDF26F6A /* SJCityModel.m */; };
 		5A3F5131D9543D9E6649EED8 /* vacancies.0.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F526F7ED20957F209E8CD /* vacancies.0.json */; };
+		5A3F51AA0D2A31E295EADDAC /* SJVacancyViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5C636C5B8B6BE07346A8 /* SJVacancyViewSection.m */; };
 		5A3F5251EE273DBE8818FF43 /* vacancy.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F5880D1D62103E866607F /* vacancy.json */; };
 		5A3F574A1CD72093B10075AD /* vacancies.1.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F5CD703CD4E7DC3C7053A /* vacancies.1.json */; };
 		5A3F57750A5C48667B0077C4 /* SJVacancyModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5522330DA9E588BD6CC0 /* SJVacancyModelSpec.m */; };
 		5A3F57B9DB2BB30D850FFD54 /* SJVacancyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5C330E2DF2F37DD2B42B /* SJVacancyModel.m */; };
 		5A3F58DDCA8ED9C2CC1FE050 /* SJVacancyFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5DFD40136170F6B4212A /* SJVacancyFacade.m */; };
+		5A3F599AFAA1C24BDE51DA04 /* SJVacancyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5088C25D7090003A37BE /* SJVacancyViewModel.m */; };
 		5A3F5A9A79C33497D9964212 /* vacancies.1.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F5CD703CD4E7DC3C7053A /* vacancies.1.json */; };
 		5A3F5B478DF75AB572CBC65C /* vacancies.0.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F526F7ED20957F209E8CD /* vacancies.0.json */; };
 		5A3F5E4C376765D59EC3C0B0 /* SJAPIAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F58C65B55784C4596F692 /* SJAPIAdapter.m */; };
+		5A3F5E882FEC8363F3B15D22 /* SJVacancyViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5DEFE1C56A2F7C689456 /* SJVacancyViewModelSpec.m */; };
 		5A3F5F83ECC6E2C6986FADCA /* SJVacancyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F540F353D77F1445D3225 /* SJVacancyTableViewController.m */; };
 		5A3F5F8D979D7F3405750FE9 /* SJSettingsStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F55A5C32708F7F6F4BBF2 /* SJSettingsStorage.m */; };
 		8EC66042E179D81284814A6F /* libPods-SuperjobExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2535154BC1C8C20C2938D11E /* libPods-SuperjobExampleTests.a */; };
@@ -48,9 +52,11 @@
 		2535154BC1C8C20C2938D11E /* libPods-SuperjobExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperjobExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5515E73FAEDBEC35E1FF3898 /* Pods-SuperjobExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperjobExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperjobExampleTests/Pods-SuperjobExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A3F506EF58EEA8BEB361BA3 /* NSError+SJError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+SJError.h"; sourceTree = "<group>"; };
+		5A3F5088C25D7090003A37BE /* SJVacancyViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyViewModel.m; sourceTree = "<group>"; };
 		5A3F526F7ED20957F209E8CD /* vacancies.0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = vacancies.0.json; sourceTree = "<group>"; };
 		5A3F52E95CEF41616E6EC3DA /* SJAPIAdapterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAPIAdapterSpec.m; sourceTree = "<group>"; };
 		5A3F53481F6DD11F0F0CDF80 /* SJAPIAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAPIAdapter.h; sourceTree = "<group>"; };
+		5A3F538DA401C069DAB59D42 /* SJVacancyViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyViewItem.m; sourceTree = "<group>"; };
 		5A3F540F353D77F1445D3225 /* SJVacancyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyTableViewController.m; sourceTree = "<group>"; };
 		5A3F5522330DA9E588BD6CC0 /* SJVacancyModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyModelSpec.m; sourceTree = "<group>"; };
 		5A3F55926B905BB9EE755EF0 /* NSError+SJError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+SJError.m"; sourceTree = "<group>"; };
@@ -60,15 +66,20 @@
 		5A3F5622B5B8FC4300C80545 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		5A3F564778FAE00E896BCB36 /* SJVacancyFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVacancyFacade.h; sourceTree = "<group>"; };
 		5A3F56F196382087D9D3E4E7 /* SJVacancyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVacancyModel.h; sourceTree = "<group>"; };
+		5A3F5771C04E9852D94199BD /* SJVacancyViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVacancyViewModel.h; sourceTree = "<group>"; };
 		5A3F580065E958913C10EA7F /* SJVacancyFacadeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyFacadeSpec.m; sourceTree = "<group>"; };
 		5A3F58299DE143B147AB3B60 /* Specs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Specs.h; sourceTree = "<group>"; };
+		5A3F582DEA7C8F72F61B0259 /* SJVacancyViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVacancyViewItem.h; sourceTree = "<group>"; };
 		5A3F5880D1D62103E866607F /* vacancy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = vacancy.json; sourceTree = "<group>"; };
 		5A3F58C65B55784C4596F692 /* SJAPIAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAPIAdapter.m; sourceTree = "<group>"; };
 		5A3F5BAAC6C1A4AFBDF26F6A /* SJCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCityModel.m; sourceTree = "<group>"; };
 		5A3F5C330E2DF2F37DD2B42B /* SJVacancyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyModel.m; sourceTree = "<group>"; };
+		5A3F5C636C5B8B6BE07346A8 /* SJVacancyViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyViewSection.m; sourceTree = "<group>"; };
 		5A3F5C92C284EE0E78C91A6F /* SJCityModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCityModelSpec.m; sourceTree = "<group>"; };
 		5A3F5CD703CD4E7DC3C7053A /* vacancies.1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = vacancies.1.json; sourceTree = "<group>"; };
+		5A3F5DEFE1C56A2F7C689456 /* SJVacancyViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyViewModelSpec.m; sourceTree = "<group>"; };
 		5A3F5DFD40136170F6B4212A /* SJVacancyFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyFacade.m; sourceTree = "<group>"; };
+		5A3F5EB2CE965953C044DC31 /* SJVacancyViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVacancyViewSection.h; sourceTree = "<group>"; };
 		5A3F5EE7E35FE5A3DDE5827C /* SJSettingsStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJSettingsStorage.h; sourceTree = "<group>"; };
 		5A3F5F6B8DAF624BCC23416A /* SJVacancyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVacancyTableViewController.h; sourceTree = "<group>"; };
 		7A6BB5D4ED2A1D2614A13FE1 /* Pods-SuperjobExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperjobExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperjobExample/Pods-SuperjobExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +118,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A3F506B624B12449D9DB2DB /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F5088C25D7090003A37BE /* SJVacancyViewModel.m */,
+				5A3F5771C04E9852D94199BD /* SJVacancyViewModel.h */,
+				5A3F5DEFE1C56A2F7C689456 /* SJVacancyViewModelSpec.m */,
+				5A3F5C636C5B8B6BE07346A8 /* SJVacancyViewSection.m */,
+				5A3F5EB2CE965953C044DC31 /* SJVacancyViewSection.h */,
+				5A3F538DA401C069DAB59D42 /* SJVacancyViewItem.m */,
+				5A3F582DEA7C8F72F61B0259 /* SJVacancyViewItem.h */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		5A3F513886DDA938E9FD72E2 /* SJCityModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +196,7 @@
 			children = (
 				5A3F5F6B8DAF624BCC23416A /* SJVacancyTableViewController.h */,
 				5A3F540F353D77F1445D3225 /* SJVacancyTableViewController.m */,
+				5A3F506B624B12449D9DB2DB /* View Model */,
 			);
 			path = SJVacancyTableViewController;
 			sourceTree = "<group>";
@@ -472,6 +498,9 @@
 				5A3F58DDCA8ED9C2CC1FE050 /* SJVacancyFacade.m in Sources */,
 				5A3F57B9DB2BB30D850FFD54 /* SJVacancyModel.m in Sources */,
 				5A3F50C9909E6D0D1F0AB96B /* SJCityModel.m in Sources */,
+				5A3F599AFAA1C24BDE51DA04 /* SJVacancyViewModel.m in Sources */,
+				5A3F51AA0D2A31E295EADDAC /* SJVacancyViewSection.m in Sources */,
+				5A3F509A41A3AB9F5B1398B3 /* SJVacancyViewItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +512,7 @@
 				5A3F5011F0221C3F90701A01 /* SJVacancyFacadeSpec.m in Sources */,
 				5A3F57750A5C48667B0077C4 /* SJVacancyModelSpec.m in Sources */,
 				5A3F501AB1BE63E4D54809F2 /* SJCityModelSpec.m in Sources */,
+				5A3F5E882FEC8363F3B15D22 /* SJVacancyViewModelSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
