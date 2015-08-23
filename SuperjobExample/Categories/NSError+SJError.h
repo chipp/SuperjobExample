@@ -9,9 +9,9 @@
 #pragma ide diagnostic ignored "OCUnusedMethodInspection"
 @interface NSError (SJError)
 
-- (NSError *)linkedError;
+- (NSError *)underlyingError;
 + (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code linkedError:(NSError *)linkedError;
-+ (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)dict linkedError:(NSError *)linkedError;
++ (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)dict underlyingError:(NSError *)underlyingError;
 
 - (NSHTTPURLResponse *)urlResponse;
 - (id)responseObject;

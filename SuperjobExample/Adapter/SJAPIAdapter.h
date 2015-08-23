@@ -6,10 +6,10 @@
 #import <Foundation/Foundation.h>
 
 extern NSString *const SJAPIAdapterErrorDomain;
-
 typedef NS_ENUM(NSUInteger, SJAPIAdapterErrorCode) {
     SJAPIAdapterErrorCodeNone,
     SJAPIAdapterErrorCodeUndefined,
+    SJAPIAdapterErrorCodeNoInternetConnection,
 };
 
 @class RACSignal;

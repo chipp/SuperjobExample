@@ -7,7 +7,7 @@
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "OCUnusedMethodInspection"
-static NSString *const kLinkedErrorKey = @"SJ_NSError_LinkedError";
+static NSString *const kUnderlyingErrorKey = @"SJ_NSError_UnderlyingError";
 static NSString *const kURLResponseKey = @"SJ_NSError_URLResponse";
 static NSString *const kResponseObjectKey = @"SJ_NSError_ResponseObject";
 
@@ -15,23 +15,23 @@ static NSString *const kResponseObjectKey = @"SJ_NSError_ResponseObject";
 
 #pragma mark - Cross Layers error
 
-- (NSError *)linkedError {
-    return self.userInfo[kLinkedErrorKey];
+- (NSError *)underlyingError {
+    return self.userInfo[kUnderlyingErrorKey];
 }
 
 + (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code linkedError:(NSError *)linkedError {
-    return [self errorWithDomain:domain code:code userInfo:nil linkedError:linkedError];
+    return [self errorWithDomain:domain code:code userInfo:nil underlyingError:linkedError];
 }
 
-+ (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)dict linkedError:(NSError *)linkedError {
++ (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)dict underlyingError:(NSError *)underlyingError {
     NSMutableDictionary *mutableUserInfo;
     if (dict) {
         mutableUserInfo = dict.mutableCopy;
     } else {
         mutableUserInfo = @{}.mutableCopy;
     }
-    if (linkedError) {
-        mutableUserInfo[kLinkedErrorKey] = linkedError;
+    if (underlyingError) {
+        mutableUserInfo[kUnderlyingErrorKey] = underlyingError;
     }
 
     return [NSError errorWithDomain:domain code:code userInfo:mutableUserInfo.copy];
@@ -81,4 +81,5 @@ static NSString *const kResponseObjectKey = @"SJ_NSError_ResponseObject";
 }
 
 @end
+
 #pragma clang diagnostic pop

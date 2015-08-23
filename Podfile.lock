@@ -20,8 +20,8 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Expecta (1.0.0)
-  - Objection (1.5)
+  - Expecta (1.0.2)
+  - Objection (1.6.1)
   - OCHamcrest (4.1.1)
   - OCMockito (1.4.0):
     - OCHamcrest (~> 4.0)
@@ -32,7 +32,7 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - Specta (1.0.2)
+  - Specta (1.0.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
@@ -44,11 +44,11 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
-  Objection: c016a7d5a2bd9d581f2ce5d40e5ecd83acea7cf9
+  Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
+  Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   OCHamcrest: 6f03ffa81d12feab872638490a44ab0a6d3aca10
   OCMockito: 4981140c9a9ec06c31af40f636e3c0f25f27e6b2
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
+  Specta: cf3e4188cf35375c3ee2cd03f8db8f1f4ef98234
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2
