@@ -13,6 +13,7 @@
 #import "SJVacancyViewSection.h"
 #import "SJVacancyTableViewCell.h"
 #import "SJVacancyViewItem.h"
+#import "SJVacancyModel.h"
 
 @interface SJVacancyTableViewController () <SJVacancyViewModelDelegate>
 @property (nonatomic, strong) SJVacancyViewModel *viewModel;
@@ -114,6 +115,11 @@ objection_requires(@"viewModel")
     return 85.f;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.viewModel selectItemAtIndexPath:indexPath];
+}
+
 #pragma mark - <SJVacancyViewModelDelegate>
 
 - (void)reloadData {
@@ -121,8 +127,18 @@ objection_requires(@"viewModel")
 }
 
 - (void)showError:(NSString *)error {
-
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:error message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
+- (void)showVacancy:(SJVacancyModel *)vacancy {
+    NSString *title = [NSString stringWithFormat:@"#%@", vacancy.key];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 @end

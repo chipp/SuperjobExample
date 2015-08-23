@@ -85,6 +85,16 @@ SpecBegin(SJVacancyViewModel)
                         [verify(vacancyFacade) vacanciesForPage:1];
                     });
                 });
+
+                context(@"when select item", ^{
+                    it(@"should open vacancy", ^{
+                        [viewModel loadData];
+                        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+                        [viewModel selectItemAtIndexPath:indexPath];
+                        SJVacancyModel *vacancy = [viewModel itemAtIndexPath:indexPath].vacancy;
+                        [verify(delegate) showVacancy:vacancy];
+                    });
+                });
             });
 
             context(@"when request failed", ^{

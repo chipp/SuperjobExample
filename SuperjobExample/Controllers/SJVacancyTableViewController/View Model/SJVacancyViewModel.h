@@ -7,11 +7,13 @@
 
 @class SJVacancyViewSection;
 @class SJVacancyViewItem;
+@class SJVacancyModel;
 
 @protocol SJVacancyViewModelDelegate <NSObject>
 
 - (void)reloadData;
 - (void)showError:(NSString *)error;
+- (void)showVacancy:(SJVacancyModel *)vacancy;
 
 @end
 
@@ -26,5 +28,6 @@
 - (NSUInteger)sectionsCount;
 - (SJVacancyViewSection *)sectionAtIndex:(NSInteger)index;
 - (SJVacancyViewItem *)itemAtIndexPath:(NSIndexPath *)indexPath;
+- (void)selectItemAtIndexPath:(NSIndexPath *)path;
 
 @end

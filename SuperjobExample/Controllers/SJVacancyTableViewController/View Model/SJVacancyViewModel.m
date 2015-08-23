@@ -138,4 +138,12 @@ objection_requires(@"vacancyFacade")
     return [[self sectionAtIndex:(NSUInteger) indexPath.section] itemAtIndex:(NSUInteger) indexPath.row];
 }
 
+- (void)selectItemAtIndexPath:(NSIndexPath *)indexPath {
+    SJVacancyModel *vacancy = [self itemAtIndexPath:indexPath].vacancy;
+    id <SJVacancyViewModelDelegate> o = self.delegate;
+    if ([o respondsToSelector:@selector(showVacancy:)]) {
+        [o showVacancy:vacancy];
+    }
+}
+
 @end
