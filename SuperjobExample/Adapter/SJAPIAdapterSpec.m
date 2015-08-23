@@ -2,21 +2,27 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "SJAPIAdapter.h"
 #import "API.h"
+#import "SJSettingsStorage.h"
 
 @interface SJAPIAdapter (Spec)
 @property (nonatomic, strong) API *api;
+@property (nonatomic, strong) SJSettingsStorage *settings;
 @end
 
 SpecBegin(SJAPIAdapter)
     describe(@"SJAPIAdapter", ^{
         __block SJAPIAdapter *apiAdapter;
         __block API *api;
+        __block SJSettingsStorage *settings;
 
         beforeEach(^{
             api = mock([API class]);
+            settings = mock([SJSettingsStorage class]);
+            [given([settings appKey]) willReturn:@"supertestkey"];
 
             apiAdapter = [SJAPIAdapter new];
             apiAdapter.api = api;
+            apiAdapter.settings = settings;
         });
 
         afterEach(^{
@@ -27,12 +33,12 @@ SpecBegin(SJAPIAdapter)
         context(@"when requests for vacancies", ^{
             it(@"should perform get request", ^{
                 [apiAdapter vacanciesWithParams:nil];
-                [verify(api) getPath:@"vacancies" withParams:anything()];
+                [verify(api) getPath:@"supertestkey/vacancies/" withParams:anything()];
             });
 
             it(@"should pass params to api as is", ^{
                 [apiAdapter vacanciesWithParams:@{@"param" : @YES}];
-                [verify(api) getPath:@"vacancies" withParams:@{@"param" : @YES}];
+                [verify(api) getPath:@"supertestkey/vacancies/" withParams:@{@"param" : @YES}];
             });
 
             context(@"when request finished successfully", ^{

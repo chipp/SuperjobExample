@@ -8,7 +8,6 @@
 @interface SJSettingsStorage : NSObject
 
 @property (nonatomic, copy) NSURL *baseURL;
-@property (nonatomic, copy, readonly) NSString *appVersion;
-@property (nonatomic, copy, readonly) NSString *appBuild;
+@property (nonatomic, copy, readonly) NSString *appKey;
 
 @end

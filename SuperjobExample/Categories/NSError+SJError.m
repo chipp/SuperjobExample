@@ -19,8 +19,8 @@ static NSString *const kResponseObjectKey = @"SJ_NSError_ResponseObject";
     return self.userInfo[kUnderlyingErrorKey];
 }
 
-+ (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code linkedError:(NSError *)linkedError {
-    return [self errorWithDomain:domain code:code userInfo:nil underlyingError:linkedError];
++ (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code underlyingError:(NSError *)underlyingError {
+    return [self errorWithDomain:domain code:code userInfo:nil underlyingError:underlyingError];
 }
 
 + (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)dict underlyingError:(NSError *)underlyingError {

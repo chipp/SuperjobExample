@@ -10,7 +10,7 @@
 @interface NSError (SJError)
 
 - (NSError *)underlyingError;
-+ (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code linkedError:(NSError *)linkedError;
++ (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code underlyingError:(NSError *)underlyingError;
 + (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)dict underlyingError:(NSError *)underlyingError;
 
 - (NSHTTPURLResponse *)urlResponse;

@@ -21,6 +21,10 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Expecta (1.0.2)
+  - Keys (1.0.0)
+  - Mantle (2.0.4):
+    - Mantle/extobjc (= 2.0.4)
+  - Mantle/extobjc (2.0.4)
   - Objection (1.6.1)
   - OCHamcrest (4.1.1)
   - OCMockito (1.4.0):
@@ -37,14 +41,22 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
   - Expecta
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - Mantle (~> 2.0.4)
   - Objection (~> 1.5)
   - OCMockito
   - ReactiveCocoa (~> 2.5)
   - Specta
 
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
+  Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
+  Mantle: 6bee68168423948be0c0c5924832bf3af188e099
   Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   OCHamcrest: 6f03ffa81d12feab872638490a44ab0a6d3aca10
   OCMockito: 4981140c9a9ec06c31af40f636e3c0f25f27e6b2

@@ -4,6 +4,7 @@
 //
 
 #import <Objection/Objection.h>
+#import <Keys/SuperjobexampleKeys.h>
 #import "SJSettingsStorage.h"
 
 #ifdef API_URL
@@ -14,8 +15,7 @@ static NSString *baseURLString = @"https://api.superjob.ru/2.0/";
 
 @interface SJSettingsStorage ()
 
-@property (nonatomic, copy, readwrite) NSString *appVersion;
-@property (nonatomic, copy, readwrite) NSString *appBuild;
+@property (nonatomic, copy, readwrite) NSString *appKey;
 
 @end
 
@@ -24,10 +24,10 @@ objection_register_singleton(SJSettingsStorage)
 
 - (void)awakeFromObjection {
     [super awakeFromObjection];
+    SuperjobexampleKeys *keys = [SuperjobexampleKeys new];
 
     self.baseURL = [NSURL URLWithString:baseURLString];
-    self.appVersion = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
-    self.appBuild = [[NSBundle mainBundle] infoDictionary][@"CFBundleVersion"];
+    self.appKey = keys.superjobApplicantKey;
 }
 
 @end

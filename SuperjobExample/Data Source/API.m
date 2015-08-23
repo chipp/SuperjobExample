@@ -102,7 +102,7 @@ objection_requires(@"settings")
 
         NSURLSessionDataTask *dataTask = [self.httpManager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *responseError) {
             if (responseError) {
-                NSError *resultError = [NSError errorByExtendingError:error urlResponse:(NSHTTPURLResponse *) response responseObject:responseObject];
+                NSError *resultError = [NSError errorByExtendingError:responseError urlResponse:(NSHTTPURLResponse *) response responseObject:responseObject];
                 [subscriber sendError:resultError];
             } else {
                 [subscriber sendNext:RACTuplePack(responseObject, response)];

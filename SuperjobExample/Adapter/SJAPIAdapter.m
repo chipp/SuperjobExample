@@ -1,4 +1,4 @@
-//
+#import <sys/cdefs.h>//
 // Created by Vladimir Burdukov on 13.07.15.
 // Copyright (c) 2015 Superjob.ru. All rights reserved.
 //
@@ -19,11 +19,11 @@ NSString *const SJAPIAdapterErrorDomain = @"ru.superjob.example.APIAdapter";
 
 @implementation SJAPIAdapter
 objection_register_singleton(SJAPIAdapter)
-
-objection_requires(@"settings", @"api", @"credentials")
+objection_requires(@"settings", @"api")
 
 - (RACSignal *)vacanciesWithParams:(NSDictionary *)params {
-    return [[[[self.api getPath:@"vacancies" withParams:params] reduceEach:^id(id result, id response) {
+    NSString *path = [self p_prependAppKeyToPath:@"vacancies"];
+    return [[[[self.api getPath:path withParams:params] reduceEach:^id(id result, id response) {
         return result;
     }] map:^id(NSDictionary *value) {
         return [SJAPIAdapter p_parseListResponse:value];
@@ -56,16 +56,50 @@ objection_requires(@"settings", @"api", @"credentials")
     }
 }
 
-+ (NSError *)p_noInternetConnectionError {
-    return [self p_localDomainErrorWithCode:SJAPIAdapterErrorCodeNoInternetConnection underlyingError:nil];
-}
-
 + (NSError *)p_localDomainErrorWithCode:(SJAPIAdapterErrorCode)code underlyingError:(NSError *)error {
-    return [NSError errorWithDomain:SJAPIAdapterErrorDomain code:code userInfo:nil underlyingError:error];
+    return [NSError errorWithDomain:SJAPIAdapterErrorDomain code:code underlyingError:error];
 }
 
 + (NSError *)p_undefinedErrorWithUnderlyingError:(NSError *)error {
     return [self p_localDomainErrorWithCode:SJAPIAdapterErrorCodeUndefined underlyingError:error];
+}
+
++ (NSError *)p_noInternetConnectionError {
+    return [self p_localDomainErrorWithCode:SJAPIAdapterErrorCodeNoInternetConnection underlyingError:nil];
+}
+
+- (NSString *)p_prependAppKeyToPath:(NSString *)path {
+    return [self p_prependAppKeyWithPathComponents:path, nil];
+}
+
+- (NSString *)p_prependAppKeyWithPathComponents:(NSString *)firstComponent, ... {
+    NSMutableArray *components = @[].mutableCopy;
+    NSString *appKey = self.settings.appKey;
+    if (appKey) {
+        [components addObject:appKey];
+    }
+
+    va_list args;
+    va_start(args, firstComponent);
+    for (NSString *pathComponent = firstComponent; pathComponent != nil; pathComponent = va_arg(args, NSString *)) {
+        [components addObject:pathComponent];
+    }
+
+    NSString *path = [[components arrayByAddingObject:@""] componentsJoinedByString:@"/"];
+    return path;
+}
+
+- (NSString *)p_preparePathWithComponents:(NSString *)firstComponent, ... __unused {
+    NSMutableArray *components = @[].mutableCopy;
+
+    va_list args;
+    va_start(args, firstComponent);
+    for (NSString *pathComponent = firstComponent; pathComponent != nil; pathComponent = va_arg(args, NSString *)) {
+        [components addObject:pathComponent];
+    }
+
+    NSString *path = [[components arrayByAddingObject:@""] componentsJoinedByString:@"/"];
+    return path;
 }
 
 @end
