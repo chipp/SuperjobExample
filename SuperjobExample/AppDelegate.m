@@ -11,13 +11,17 @@
 #import "API.h"
 #import <Objection/Objection.h>
 
+#define FAKE_API
+
 @interface SJModule : JSObjectionModule
 @end
 
 @implementation SJModule
 
 - (void)configure {
+#ifdef FAKE_API
     [self bindClass:[FakeAPI class] toClass:[API class]];
+#endif
 }
 
 @end
