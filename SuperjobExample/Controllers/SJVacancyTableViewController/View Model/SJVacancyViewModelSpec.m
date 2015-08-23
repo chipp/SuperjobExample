@@ -73,6 +73,11 @@ SpecBegin(SJVacancyViewModel)
                     expect(item.subtitle).to.equal(@"120 000 \u20BD, Москва");
                 });
 
+                it(@"should display valid title", ^{
+                    [viewModel loadData];
+                    expect(viewModel.title).to.equal(@"20 вакансий");
+                });
+
                 context(@"when need to load more data", ^{
                     it(@"should request for next page", ^{
                         [viewModel loadData];

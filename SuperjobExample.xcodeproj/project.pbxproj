@@ -20,6 +20,7 @@
 		5A3F574A1CD72093B10075AD /* vacancies.1.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F5CD703CD4E7DC3C7053A /* vacancies.1.json */; };
 		5A3F57750A5C48667B0077C4 /* SJVacancyModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5522330DA9E588BD6CC0 /* SJVacancyModelSpec.m */; };
 		5A3F57B9DB2BB30D850FFD54 /* SJVacancyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5C330E2DF2F37DD2B42B /* SJVacancyModel.m */; };
+		5A3F57EFC124623C9CC4DF36 /* SJPluralHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F522BA8DF5588DEA19C9D /* SJPluralHelper.m */; };
 		5A3F58DDCA8ED9C2CC1FE050 /* SJVacancyFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5DFD40136170F6B4212A /* SJVacancyFacade.m */; };
 		5A3F599AFAA1C24BDE51DA04 /* SJVacancyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5088C25D7090003A37BE /* SJVacancyViewModel.m */; };
 		5A3F5A9A79C33497D9964212 /* vacancies.1.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F5CD703CD4E7DC3C7053A /* vacancies.1.json */; };
@@ -35,6 +36,8 @@
 		B586560A1B53B66100DCDCB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58656081B53B66100DCDCB2 /* Main.storyboard */; };
 		B586560C1B53B66100DCDCB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586560B1B53B66100DCDCB2 /* Images.xcassets */; };
 		B586560F1B53B66100DCDCB2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B586560D1B53B66100DCDCB2 /* LaunchScreen.xib */; };
+		B5BB85C31B8A288B00968748 /* SJVacancyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB85C21B8A288B00968748 /* SJVacancyTableViewCell.m */; };
+		B5BB85C61B8A2E2C00968748 /* SJVacancyPlaceholderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB85C51B8A2E2C00968748 /* SJVacancyPlaceholderTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,7 @@
 		5515E73FAEDBEC35E1FF3898 /* Pods-SuperjobExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperjobExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperjobExampleTests/Pods-SuperjobExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A3F506EF58EEA8BEB361BA3 /* NSError+SJError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+SJError.h"; sourceTree = "<group>"; };
 		5A3F5088C25D7090003A37BE /* SJVacancyViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyViewModel.m; sourceTree = "<group>"; };
+		5A3F522BA8DF5588DEA19C9D /* SJPluralHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJPluralHelper.m; sourceTree = "<group>"; };
 		5A3F526F7ED20957F209E8CD /* vacancies.0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = vacancies.0.json; sourceTree = "<group>"; };
 		5A3F52E95CEF41616E6EC3DA /* SJAPIAdapterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAPIAdapterSpec.m; sourceTree = "<group>"; };
 		5A3F53481F6DD11F0F0CDF80 /* SJAPIAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAPIAdapter.h; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 		5A3F5EB2CE965953C044DC31 /* SJVacancyViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVacancyViewSection.h; sourceTree = "<group>"; };
 		5A3F5EE7E35FE5A3DDE5827C /* SJSettingsStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJSettingsStorage.h; sourceTree = "<group>"; };
 		5A3F5F6B8DAF624BCC23416A /* SJVacancyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVacancyTableViewController.h; sourceTree = "<group>"; };
+		5A3F5FD84720C696349BD0A8 /* SJPluralHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJPluralHelper.h; sourceTree = "<group>"; };
 		7A6BB5D4ED2A1D2614A13FE1 /* Pods-SuperjobExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperjobExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperjobExample/Pods-SuperjobExample.release.xcconfig"; sourceTree = "<group>"; };
 		9B09268F2540CA86380C2649 /* Pods-SuperjobExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperjobExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperjobExample/Pods-SuperjobExample.debug.xcconfig"; sourceTree = "<group>"; };
 		ABEC608772489DB2C8DA86CA /* libPods-SuperjobExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperjobExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +100,10 @@
 		B586560E1B53B66100DCDCB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B58656141B53B66100DCDCB2 /* SuperjobExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperjobExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58656191B53B66100DCDCB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5BB85C11B8A288B00968748 /* SJVacancyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVacancyTableViewCell.h; sourceTree = "<group>"; };
+		B5BB85C21B8A288B00968748 /* SJVacancyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyTableViewCell.m; sourceTree = "<group>"; };
+		B5BB85C41B8A2E2C00968748 /* SJVacancyPlaceholderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVacancyPlaceholderTableViewCell.h; sourceTree = "<group>"; };
+		B5BB85C51B8A2E2C00968748 /* SJVacancyPlaceholderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVacancyPlaceholderTableViewCell.m; sourceTree = "<group>"; };
 		D773BF35B653FCA8C46D3711 /* Pods-SuperjobExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperjobExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperjobExampleTests/Pods-SuperjobExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +127,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A3F5069C8B72CE6A3CC1B02 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F522BA8DF5588DEA19C9D /* SJPluralHelper.m */,
+				5A3F5FD84720C696349BD0A8 /* SJPluralHelper.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		5A3F506B624B12449D9DB2DB /* View Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +180,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5A3F5487AF8DAF9AECA3DC75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5BB85C11B8A288B00968748 /* SJVacancyTableViewCell.h */,
+				B5BB85C21B8A288B00968748 /* SJVacancyTableViewCell.m */,
+				B5BB85C41B8A2E2C00968748 /* SJVacancyPlaceholderTableViewCell.h */,
+				B5BB85C51B8A2E2C00968748 /* SJVacancyPlaceholderTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5A3F55AC691C59A0FA76FCFF /* Data Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +226,7 @@
 				5A3F5F6B8DAF624BCC23416A /* SJVacancyTableViewController.h */,
 				5A3F540F353D77F1445D3225 /* SJVacancyTableViewController.m */,
 				5A3F506B624B12449D9DB2DB /* View Model */,
+				5A3F5487AF8DAF9AECA3DC75 /* View */,
 			);
 			path = SJVacancyTableViewController;
 			sourceTree = "<group>";
@@ -275,6 +305,7 @@
 				5A3F58F3BA4A71E7CCBFEDED /* Categories */,
 				5A3F5615A80AEC3B471407E5 /* Storage */,
 				5A3F52589772B2868C2D1B8C /* Models */,
+				5A3F5069C8B72CE6A3CC1B02 /* Helpers */,
 			);
 			path = SuperjobExample;
 			sourceTree = "<group>";
@@ -490,6 +521,7 @@
 			files = (
 				B58656041B53B66100DCDCB2 /* AppDelegate.m in Sources */,
 				B58656011B53B66100DCDCB2 /* main.m in Sources */,
+				B5BB85C31B8A288B00968748 /* SJVacancyTableViewCell.m in Sources */,
 				5A3F5F83ECC6E2C6986FADCA /* SJVacancyTableViewController.m in Sources */,
 				5A3F50A0F15CFEEDE8A3D71D /* API.m in Sources */,
 				5A3F5057D37573BC0F86ECC6 /* NSError+SJError.m in Sources */,
@@ -501,6 +533,8 @@
 				5A3F599AFAA1C24BDE51DA04 /* SJVacancyViewModel.m in Sources */,
 				5A3F51AA0D2A31E295EADDAC /* SJVacancyViewSection.m in Sources */,
 				5A3F509A41A3AB9F5B1398B3 /* SJVacancyViewItem.m in Sources */,
+				B5BB85C61B8A2E2C00968748 /* SJVacancyPlaceholderTableViewCell.m in Sources */,
+				5A3F57EFC124623C9CC4DF36 /* SJPluralHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

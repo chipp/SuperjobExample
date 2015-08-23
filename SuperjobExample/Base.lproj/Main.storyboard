@@ -1,23 +1,85 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Zna-GD-7bg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="eK8-wx-6Ei">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationController" id="wcK-md-pgz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rwK-1r-8a9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Zna-GD-7bg" kind="relationship" relationship="rootViewController" id="I9i-rx-aPw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lti-hE-a93" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-249" y="371"/>
+        </scene>
         <!--Vacancy Table View Controller-->
         <scene sceneID="FuA-ZL-BgQ">
             <objects>
                 <tableViewController id="Zna-GD-7bg" customClass="SJVacancyTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2um-f8-jf8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="22" sectionFooterHeight="22" id="2um-f8-jf8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="X15-uS-t8u">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SJVacancyTableViewCell" rowHeight="99" id="X15-uS-t8u" customClass="SJVacancyTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X15-uS-t8u" id="Jps-Tw-q0Y">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Администратор процессинговой системы Way4" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="Mq0-db-Etx">
+                                            <rect key="frame" x="15" y="15" width="290" height="43"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="120 000 ₽, Москва" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="aOj-wf-e0E">
+                                            <rect key="frame" x="15" y="63" width="290" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Mq0-db-Etx" firstAttribute="leading" secondItem="Jps-Tw-q0Y" secondAttribute="leading" constant="15" id="4DZ-Kt-i13"/>
+                                        <constraint firstAttribute="bottom" secondItem="aOj-wf-e0E" secondAttribute="bottom" constant="15" id="78L-JM-7Zj"/>
+                                        <constraint firstAttribute="trailing" secondItem="aOj-wf-e0E" secondAttribute="trailing" constant="15" id="Iog-hc-66Y"/>
+                                        <constraint firstItem="Mq0-db-Etx" firstAttribute="top" secondItem="Jps-Tw-q0Y" secondAttribute="top" constant="15" id="U5k-bf-AG8"/>
+                                        <constraint firstAttribute="trailing" secondItem="Mq0-db-Etx" secondAttribute="trailing" constant="15" id="bcS-Rh-dUO"/>
+                                        <constraint firstItem="aOj-wf-e0E" firstAttribute="top" secondItem="Mq0-db-Etx" secondAttribute="bottom" constant="5" id="wLC-Le-jpk"/>
+                                        <constraint firstItem="aOj-wf-e0E" firstAttribute="leading" secondItem="Jps-Tw-q0Y" secondAttribute="leading" constant="15" id="zu4-h0-gAL"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="subtitleLabel" destination="aOj-wf-e0E" id="Fqx-S6-2ke"/>
+                                    <outlet property="titleLabel" destination="Mq0-db-Etx" id="ysz-nA-Kja"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SJVacancyPlaceholderTableViewCell" rowHeight="85" id="t6L-I4-avR" customClass="SJVacancyPlaceholderTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t6L-I4-avR" id="rYW-Vo-TbS">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7Kr-MA-2Ay">
+                                            <rect key="frame" x="142" y="24" width="37" height="37"/>
+                                            <color key="color" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerX" secondItem="7Kr-MA-2Ay" secondAttribute="centerX" id="sGJ-sI-6Wq"/>
+                                        <constraint firstAttribute="centerY" secondItem="7Kr-MA-2Ay" secondAttribute="centerY" id="sfd-kc-D1e"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="7Kr-MA-2Ay" id="iHX-IF-7dq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -25,10 +87,11 @@
                             <outlet property="delegate" destination="Zna-GD-7bg" id="x7P-nn-hJo"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="yrF-48-BV3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jc3-l7-8I7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="185" y="377"/>
+            <point key="canvasLocation" x="308" y="371"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -6,95 +6,123 @@
 //  Copyright (c) 2015 Superjob.ru. All rights reserved.
 //
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Objection/Objection.h>
 #import "SJVacancyTableViewController.h"
+#import "SJVacancyViewModel.h"
+#import "SJVacancyViewSection.h"
+#import "SJVacancyTableViewCell.h"
+#import "SJVacancyViewItem.h"
 
-@interface SJVacancyTableViewController ()
-
+@interface SJVacancyTableViewController () <SJVacancyViewModelDelegate>
+@property (nonatomic, strong) SJVacancyViewModel *viewModel;
 @end
 
 @implementation SJVacancyTableViewController
+objection_requires(@"viewModel")
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    JSObjectionInjector *injector = [JSObjection createInjector];
+    [JSObjection setDefaultInjector:injector];
+
+    [[JSObjection defaultInjector] injectDependencies:self];
+    self.viewModel.delegate = self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    RAC(self, title) = RACObserve(self, viewModel.title);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.viewModel loadData];
 }
 
-#pragma mark - Table view data source
+#pragma mark - <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return self.viewModel.sectionsCount;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
+    return [self.viewModel sectionAtIndex:section].itemsCount;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    SJVacancyViewItem *item = [self.viewModel itemAtIndexPath:indexPath];
+    NSString *identifier = [self reuseIdentifierForType:item.type];
+    SJVacancyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+
+    if ([cell respondsToSelector:@selector(configureWithItem:)]) {
+        [cell configureWithItem:item];
+    }
+    if ([cell respondsToSelector:@selector(updatePreferredWidthWithTableWidth:)]) {
+        [cell updatePreferredWidthWithTableWidth:CGRectGetWidth(self.tableView.frame)];
+    }
+
+    return cell;
+}
+
+- (NSString *)reuseIdentifierForType:(SJVacancyViewItemType)type {
+    switch (type) {
+        case SJVacancyViewItemTypeVacancy:
+            return @"SJVacancyTableViewCell";
+        case SJVacancyViewItemTypePlaceholder:
+            return @"SJVacancyPlaceholderTableViewCell";
+    }
+    return nil;
+}
+
+#pragma mark - <UITableViewDelegate>
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    SJVacancyViewItem *item = [self.viewModel itemAtIndexPath:indexPath];
+    switch (item.type) {
+        case SJVacancyViewItemTypeVacancy:
+            break;
+        case SJVacancyViewItemTypePlaceholder:
+            [self.viewModel loadMoreData];
+            break;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    SJVacancyViewItem *item = [self.viewModel itemAtIndexPath:indexPath];
+    switch (item.type) {
+        case SJVacancyViewItemTypeVacancy: {
+            static SJVacancyTableViewCell *cell;
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{
+                cell = [tableView dequeueReusableCellWithIdentifier:[self reuseIdentifierForType:item.type]];
+            });
+            [cell prepareForReuse];
+            [cell configureWithItem:item];
+            [cell updatePreferredWidthWithTableWidth:CGRectGetWidth(tableView.frame)];
+            CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+            return size.height + 1.f;
+        }
+        case SJVacancyViewItemTypePlaceholder:
+            return 85.f;
+    }
+
     return 0;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 85.f;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - <SJVacancyViewModelDelegate>
+
+- (void)reloadData {
+    [self.tableView reloadData];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)showError:(NSString *)error {
+
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

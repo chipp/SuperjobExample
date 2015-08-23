@@ -11,6 +11,7 @@
 #import "SJVacancyViewItem.h"
 #import "SJVacancyFacade.h"
 #import "SJVacancyModel.h"
+#import "SJPluralHelper.h"
 
 @interface SJVacancyViewSection (Private)
 @property (nonatomic, strong) NSArray *items;
@@ -23,6 +24,7 @@
 @property (nonatomic, strong) SJVacancyFacade *vacancyFacade;
 @property (nonatomic, assign) NSUInteger page;
 
+@property (nonatomic, copy, readwrite) NSString *title;
 @end
 
 @implementation SJVacancyViewModel
@@ -59,12 +61,14 @@ objection_requires(@"vacancyFacade")
 - (void)p_loadPage:(NSUInteger)page {
     self.loading = YES;
     @weakify(self)
-    [[[self.vacancyFacade vacanciesForPage:page] finally:^{
+    [[[[self.vacancyFacade vacanciesForPage:page] finally:^{
         @strongify(self)
         self.loading = NO;
-    }] subscribeNext:^(RACTuple *response) {
+    }] deliverOnMainThread] subscribeNext:^(RACTuple *response) {
         @strongify(self)
         RACTupleUnpack(NSArray *objects, NSNumber *total, NSNumber *hasMoreItems) = response;
+        NSString *plural = [SJPluralHelper pluralForm:total.integerValue withOne:@"вакансия" two:@"вакансии" many:@"вакансий"];
+        self.title = [NSString stringWithFormat:@"%@ %@", total, plural];
         NSArray *items = [self p_parseObjects:objects placeholder:hasMoreItems.boolValue];
         [self p_addItems:items toSection:self.section];
         id <SJVacancyViewModelDelegate> o = self.delegate;
@@ -126,7 +130,7 @@ objection_requires(@"vacancyFacade")
     return 1;
 }
 
-- (SJVacancyViewSection *)sectionAtIndex:(NSUInteger)index {
+- (SJVacancyViewSection *)sectionAtIndex:(NSInteger)index {
     return (index == 0) ? self.section : nil;
 }
 

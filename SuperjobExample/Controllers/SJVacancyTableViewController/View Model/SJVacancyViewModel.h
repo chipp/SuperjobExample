@@ -18,11 +18,13 @@
 @interface SJVacancyViewModel : NSObject
 
 @property (nonatomic, weak) id <SJVacancyViewModelDelegate> delegate;
+@property (nonatomic, copy, readonly) NSString *title;
+
 - (void)loadData;
-+ (NSString *)p_errorMessageForError:(NSError *)error;
 - (void)loadMoreData;
+
 - (NSUInteger)sectionsCount;
-- (SJVacancyViewSection *)sectionAtIndex:(NSUInteger)index;
+- (SJVacancyViewSection *)sectionAtIndex:(NSInteger)index;
 - (SJVacancyViewItem *)itemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
