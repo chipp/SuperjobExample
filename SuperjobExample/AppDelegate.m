@@ -7,17 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import "FakeAPI.h"
+#import "API.h"
 #import <Objection/Objection.h>
 
-@interface AppDelegate ()
+@interface SJModule : JSObjectionModule
+@end
+
+@implementation SJModule
+
+- (void)configure {
+    [self bindClass:[FakeAPI class] toClass:[API class]];
+}
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    JSObjectionInjector *injector = [JSObjection createInjector];
+    JSObjectionInjector *injector = [JSObjection createInjector:[SJModule new]];
     [JSObjection setDefaultInjector:injector];
 
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

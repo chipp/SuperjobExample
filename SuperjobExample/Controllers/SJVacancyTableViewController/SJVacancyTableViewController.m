@@ -24,9 +24,6 @@ objection_requires(@"viewModel")
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    JSObjectionInjector *injector = [JSObjection createInjector];
-    [JSObjection setDefaultInjector:injector];
-
     [[JSObjection defaultInjector] injectDependencies:self];
     self.viewModel.delegate = self;
 }

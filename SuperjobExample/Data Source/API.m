@@ -21,7 +21,6 @@
 
 @implementation API
 objection_register_singleton(API)
-
 objection_requires(@"settings")
 
 - (void)awakeFromObjection {
