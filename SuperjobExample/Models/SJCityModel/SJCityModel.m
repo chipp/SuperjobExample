@@ -3,15 +3,16 @@
 // Copyright (c) 2015 Superjob.ru. All rights reserved.
 //
 
-#import "SJVacancyModel.h"
+#import "SJCityModel.h"
 
-@implementation SJVacancyModel
+@implementation SJCityModel
 
-#pragma mark - <MTLJSONSerializing>
+#pragma mark - <MTLJSONAdapter>
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-
+            @"key" : @"id",
+            @"title" : @"title"
     };
 }
 

@@ -9,6 +9,7 @@ plugin 'cocoapods-keys', {
 }
 
 inhibit_all_warnings!
+
 target 'SuperjobExample' do
 	pod 'Objection', '~> 1.5'
 	pod 'ReactiveCocoa', '~> 2.5'
@@ -16,7 +17,7 @@ target 'SuperjobExample' do
 	pod 'Mantle', '~> 2.0.4'
 end
 
-target 'SuperjobExampleTests' do
+target 'SuperjobExampleTests', :exclusive => true do
 	pod 'Specta'
 	pod 'Expecta'
 	pod 'OCMockito'
