@@ -8,4 +8,4 @@
 
 # Использование локальных файлов
 
-1. Ракомментировать строчку [#14](https://github.com/chipp/SuperjobExample/blob/master/SuperjobExample/AppDelegate.m#L14) `#define FAKE_API` в `AppDelegate.m`
+1. Раскомментировать строчку [#14](https://github.com/chipp/SuperjobExample/blob/master/SuperjobExample/AppDelegate.m#L14) `#define FAKE_API` в `AppDelegate.m`
